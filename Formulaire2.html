@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <title>Frmulaire</title>
+  <link rel="stylesheet" type="text/css" href="Monstyle.css"> 
+</head>
+<body>
+	<H1> Formulaire de saisie </H1>
+	
+	<form method="post" action="traitementForm2.php">
+		<fieldset> 
+			<legend>Civilité</legend>
+			<input type="radio" name="Civilite" value="Mademoiselle">Mademoiselle
+			<input type="radio" name="Civilite" value="Madame" checked>Madame
+			<input type="radio" name="Civilite" value="Monsieur">Monsieur 
+		</fieldset>
+		<fieldset> 
+			<legend>Vous</legend>
+			Votre année de naissance (jj/mm/aaaa)  : <input type="date" name="Naissance" /> <BR>
+			NOM Prénom  : <input type="text" name="NomPrenom" /> <BR> 
+			 Votre Adresse : <BR>  <TEXTAREA NAME="adresse" ROWS="5" COLS="50"> </TEXTAREA> <BR>
+			 Code Postal <input type="text" name="CodeP"  size="5" MAXLENGTH="5"/>
+			 Ville <input type="text" name="Ville" value="Nice"> <BR>
+			Quel est votre pays :  <BR>
+				<SELECT NAME="Pays" SIZE="8" align=>
+					<OPTION VALUE="Belgique">Belgique
+					<OPTION VALUE="France" SELECTED>France
+					<OPTION VALUE="Angleterre">Angleterre
+					<OPTION VALUE="Irlande">Irlande
+					<OPTION VALUE="Italie">Italie			
+				</SELECT> 
+		</fieldset> 
+		<fieldset> 
+			<legend>Vos compétences</legend>
+			Plateformes (OS) : <BR>
+			<INPUT TYPE="checkbox" NAME="OS" VALUE="Windows" CHECKED>Windows
+			<INPUT TYPE="checkbox" NAME="OS" VALUE="Mac">Mac
+			<INPUT TYPE="checkbox" NAME="OS" VALUE="Linux">Linux
+			<INPUT TYPE="checkbox" NAME="OS" VALUE="Autre">Autre<BR>
+			
+			<SELECT NAME="Application[]" SIZE="5" MULTIPLE>
+				<OPTION VALUE="Word">Word
+				<OPTION VALUE="Excel">Excel
+				<OPTION VALUE="Visual Studio" SELECTED >Visual Studio
+				<OPTION VALUE="Packet tracer">Packet tracer
+				<OPTION VALUE="MindView">MindView
+			</SELECT> 
+		</fieldset> 
+		
+		<input type="submit" name="valider" value="Valider" />
+		
+	</form>
+	<A href="index.php">retour à l'accueil</A> 
+	
+  
+</body>
+</html>
